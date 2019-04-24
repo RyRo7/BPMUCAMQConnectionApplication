@@ -1,0 +1,29 @@
+allprojects {
+    // common configuration (e.g., repositories {})
+    group = "bpm.uca.events"
+    version = "1.0"
+}
+
+project(":BPMUCAMQConnectionApplicationEJB") {
+    apply plugin: 'java'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compile 'com.ibm.websphere.appserver.api:com.ibm.websphere.appserver.api.security:1.2.26'
+        compile 'javax.ejb:ejb-api:3.0'
+        compile 'javax.jms:javax.jms-api:2.0.1'
+        compile 'javax.resource:javax.resource-api:1.7'
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src']
+        }
+    }
+}
+project(":BPMUCAMQConnectionApplicationEAR") {
+    apply plugin: 'ear'
+    dependencies {
+        deploy project(":BPMUCAMQConnectionApplicationEJB")
+    }
+}

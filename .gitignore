@@ -1,0 +1,23 @@
+.gradle
+/build/
+/out/
+!gradle/wrapper/gradle-wrapper.jar
+*.log
+*.log.*
+*.log.*.gz
+*.log.*.lck
+*.log.*.tmp
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr

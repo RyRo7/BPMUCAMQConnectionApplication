@@ -1,0 +1,17 @@
+project(":BPMUCAMQConnectionApplicationEJB") {
+    apply plugin: 'java'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        compile 'javax.ejb:ejb-api:3.0'
+        compile 'javax.jms:javax.jms-api:2.0.1'
+        compile 'javax.resource:javax.resource-api:1.7'
+        compile 'com.ibm.websphere.appserver.api:com.ibm.websphere.appserver.api.security:1.2.26'
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src']
+        }
+    }
+}
